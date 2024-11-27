@@ -10,7 +10,7 @@ public class BaseTest {
     public String homePage ="https://preprod.netmera.com/#/index/netmeratest/campaigns";
     @BeforeClass
     public void before() {
-        killChromeProcesses();
+        //killChromeProcesses();
         ChromeOptions chromeOptions = new ChromeOptions();
         //chromeOptions.addArguments("--headless"); // Run in headless mode
         chromeOptions.addArguments("--remote-allow-origins=*");
@@ -39,6 +39,6 @@ public class BaseTest {
     public void after() throws InterruptedException {
         driver.quit();
         Thread.sleep(2000);
-        killChromeProcesses();
+        //killChromeProcesses();
     }
 }
